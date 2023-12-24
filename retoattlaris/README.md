@@ -7,8 +7,8 @@ Esta plantilla proporciona una configuración mínima para hacer funcionar React
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/Alexis12vloq/RetoAttlaris.git
+cd retoattlaris
 ```
 
 2. Instala las dependencias:
