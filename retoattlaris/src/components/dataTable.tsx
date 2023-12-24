@@ -48,7 +48,7 @@ const DataTable = () => {
       field: "acciones",
       headerName: "",
       width: 180,
-      renderCell: (params) => (
+      renderCell: (params: any) => (
         <>
           <IconButton
             color="primary"
@@ -77,7 +77,7 @@ const DataTable = () => {
     },
   ];
 
-  const handleFilterChange = (e) => {
+  const handleFilterChange = (e: any) => {
     setFilterText(e.target.value);
   };
 
@@ -88,12 +88,12 @@ const DataTable = () => {
       row.examen.toLowerCase().includes(filterText.toLowerCase()) ||
       row.estado.toLowerCase().includes(filterText.toLowerCase())
   );
-  const crearFila = (nuevaFila) => {
+  const crearFila = (nuevaFila: any) => {
     nuevaFila.id = rows.length + 1;
     setRows([...rows, nuevaFila]);
   };
 
-  const editarFila = (filaEditada) => {
+  const editarFila = (filaEditada: any) => {
     const filasActualizadas = rows.map((fila) =>
       fila.id === filaEditada.id ? filaEditada : fila
     );
@@ -147,10 +147,6 @@ const DataTable = () => {
         <DataGrid
           rows={filteredRows}
           columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5, 10, 20]}
-          pagination
-          disableSelectionOnClick
           autoHeight
           style={{ background: "white" }}
         />
